@@ -68,15 +68,14 @@ export default function Contact() {
   };
 
   const contactInfo = [
-    { icon: Mail, label: 'Email', value: 'hello@aiagent.dev', href: 'mailto:hello@aiagent.dev' },
+    { icon: Mail, label: 'Email', value: 'simone.torrengo@gmail.com', href: 'mailto:simone.torrengo@gmail.com' },
     { icon: Phone, label: 'Telefono', value: '+39 123 456 7890', href: 'tel:+391234567890' },
-    { icon: MapPin, label: 'Location', value: 'Milano, Italia', href: '#' },
+    { icon: MapPin, label: 'Location', value: 'Torino, Italia', href: '#' },
   ];
 
   const socialLinks = [
-    { icon: Linkedin, label: 'LinkedIn', href: '#' },
+    { icon: Linkedin, label: 'LinkedIn', href: 'https://www.linkedin.com/in/simone-torrengo' },
     { icon: Github, label: 'GitHub', href: 'https://github.com/SIMONE010afk' },
-    { icon: Twitter, label: 'Twitter', href: '#' },
   ];
 
   return (
