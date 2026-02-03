@@ -14,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 const skills = [
   { name: 'Python', icon: Code2, level: 100, category: 'Linguaggi' },
   { name: 'JavaScript', icon: Code2, level: 60, category: 'Linguaggi' },
+  { name: 'TypeScript', icon: Code2, level: 70, category: 'Linguaggi' },
   { name: 'SQL', icon: Database, level: 90, category: 'Linguaggi' },
   { name: 'C', icon: Code2, level: 70, category: 'Linguaggi' },
   { name: 'Rust', icon: Cog, level: 40, category: 'Linguaggi' },
