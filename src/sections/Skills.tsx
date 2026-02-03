@@ -5,7 +5,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import {
   Brain, Code2, Database, Cloud, MessageSquare, Eye, Cpu, Layers,
-  GitBranch, Terminal, BarChart3, Workflow, Cog,
+  GitBranch, Terminal, BarChart3, Workflow, Cog, NotebookPen,
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -30,7 +30,9 @@ const skills = [
   { name: 'Docker', icon: Terminal, level: 90, category: 'DevOps' },
   { name: 'Scikit-learn', icon: Brain, level: 90, category: 'ML/AI' },
   { name: 'RAG', icon: Eye, level: 80, category: 'AI' },
-  { name: 'BigQuery', icon: Database, level: 90, category: 'Database' }
+  { name: 'BigQuery', icon: Database, level: 90, category: 'Database' },
+  { name: 'Google Colab', icon: NotebookPen, level: 100, category: 'Tools' },
+  { name: 'Google Cloud Storage', icon: Cloud, level: 84, category: 'DevOps' },
 ];
 
 const categories = ['Tutti', ...new Set(skills.map((s) => s.category))];

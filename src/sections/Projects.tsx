@@ -8,13 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 const projects = [
   {
     id: 1,
-    title: 'Assistente Virtuale Enterprise',
-    description: 'Un assistente AI avanzato per grandi aziende, capace di gestire richieste complesse, integrarsi con sistemi CRM esistenti e fornire supporto 24/7 in multiple lingue.',
+    title: 'Facebook Hateful Memes - Multimodal Hate Speech Detection',
+    description: 'Sistema di rilevamento di hate speech multimodale basato su deep learning e visione artificiale.',
     image: '/project-1.jpg',
-    tags: ['Python', 'OpenAI', 'FastAPI', 'PostgreSQL'],
+    tags: ['Notebook', 'Google Colab', 'NLP', 'TensorFlow'],
     icon: Bot,
     link: '#',
-    github: '#'
+    github: 'https://github.com/SIMONE010afk/Facebook-Hateful-Memes'
   },
   {
     id: 2,
