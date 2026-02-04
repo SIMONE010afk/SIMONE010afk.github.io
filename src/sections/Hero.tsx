@@ -103,7 +103,7 @@ export default function Hero() {
                 className="text-lg sm:text-xl text-[#33383f] mb-8 max-w-xl leading-relaxed"
               >
                 Creo agenti che trasformano il modo in cui interagisci con la
-                tecnologia su Azure. Specializzato in NLP, LLM e architetture
+                tecnologia. Specializzato in NLP, LLM e architetture
                 AI avanzate.
               </p>
 
