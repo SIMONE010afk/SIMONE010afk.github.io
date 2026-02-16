@@ -1,23 +1,3 @@
-/**
- * ============================================================================
- * AI AGENT DEVELOPER PORTFOLIO
- * ============================================================================
- * 
- * Copyright (c) 2026 AI Agent Developer
- * All rights reserved.
- * 
- * This portfolio website and its source code are the exclusive property 
- * of the author. Unauthorized copying, modification, or distribution 
- * is strictly prohibited without written permission.
- * 
- * Original design and development by: AI Agent Developer
- * Portfolio URL: https://ox7jkt6hwzvys.ok.kimi.link
- * 
- * For licensing inquiries, contact: hello@aiagent.dev
- * 
- * ============================================================================
- */
-
 import { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -28,6 +8,7 @@ import Projects from './sections/Projects';
 import Skills from './sections/Skills';
 import Contact from './sections/Contact';
 import Footer from './sections/Footer';
+import { useLanguage } from './lib/language';
 
 import './App.css';
 
@@ -35,6 +16,8 @@ import './App.css';
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
+  const { language } = useLanguage();
+
   useEffect(() => {
     // Initialize smooth scroll behavior
     document.documentElement.style.scrollBehavior = 'smooth';
@@ -46,6 +29,10 @@ function App() {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
   }, []);
+
+  useEffect(() => {
+    document.documentElement.lang = language;
+  }, [language]);
 
   return (
     <div className="min-h-screen bg-[#f7f9fa]">

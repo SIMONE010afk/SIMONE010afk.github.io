@@ -1,16 +1,18 @@
 import { useState, useEffect } from 'react';
-import { Bot, Menu, X } from 'lucide-react';
-
-const navLinks = [
-  { label: 'Home', href: '#home' },
-  { label: 'Progetti', href: '#projects' },
-  { label: 'Competenze', href: '#skills' },
-  { label: 'Contatti', href: '#contact' },
-];
+import { ChartNoAxesCombined, Menu, X } from 'lucide-react';
+import { useLanguage } from '../lib/language';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { language } = useLanguage();
+
+  const navLinks = [
+    { label: language === 'it' ? 'Home' : 'Home', href: '#home' },
+    { label: language === 'it' ? 'Progetti' : 'Projects', href: '#projects' },
+    { label: language === 'it' ? 'Competenze' : 'Skills', href: '#skills' },
+    { label: language === 'it' ? 'Contatti' : 'Contact', href: '#contact' },
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -53,12 +55,12 @@ export default function Navigation() {
                   ? 'bg-gradient-to-br from-[#0070a0] to-[#2c90c9]' 
                   : 'bg-white/20 backdrop-blur-sm'
               }`}>
-                <Bot className="w-5 h-5 text-white" />
+                  <ChartNoAxesCombined className="w-5 h-5 text-white" />
               </div>
               <span className={`font-semibold text-lg transition-colors ${
                 isScrolled ? 'text-[#1f1f1f]' : 'text-[#1f1f1f]'
               }`}>
-                AI Agent Dev
+                Simone Torrengo
               </span>
             </a>
 
@@ -92,7 +94,7 @@ export default function Navigation() {
                     : 'bg-[#0070a0] text-white hover:bg-[#004968]'
                 }`}
               >
-                Contattami
+                {language === 'it' ? 'Contattami' : 'Contact me'}
               </a>
             </div>
 
@@ -149,7 +151,7 @@ export default function Navigation() {
               onClick={(e) => handleLinkClick(e, '#contact')}
               className="block w-full text-center px-5 py-3 rounded-xl bg-[#0070a0] text-white font-medium hover:bg-[#004968] transition-colors"
             >
-              Contattami
+              {language === 'it' ? 'Contattami' : 'Contact me'}
             </a>
           </div>
         </div>

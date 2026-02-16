@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { ArrowDown, Sparkles } from 'lucide-react';
 import gsap from 'gsap';
+import { useLanguage } from '../lib/language';
 
 export default function Hero() {
   const heroRef = useRef<HTMLDivElement>(null);
@@ -8,6 +9,7 @@ export default function Hero() {
   const subtitleRef = useRef<HTMLParagraphElement>(null);
   const imageRef = useRef<HTMLDivElement>(null);
   const buttonRef = useRef<HTMLButtonElement>(null);
+  const { language } = useLanguage();
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -49,7 +51,7 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
-  const title = 'Sono un AI Agent Developer';
+  const title = language === 'it' ? 'Data Analyst e         AI Specialist' : 'Data Analyst and   AI Specialist';
   const titleChars = title.split('').map((char, i) => (
     <span
       key={i}
@@ -87,7 +89,7 @@ export default function Hero() {
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/80 backdrop-blur-sm border border-[#c2cdd8] mb-6 animate-fade-in">
                 <Sparkles className="w-4 h-4 text-[#0070a0]" />
                 <span className="text-sm font-medium text-[#33383f]">
-                  Disponibile per nuovi progetti
+                  {language === 'it' ? 'Disponibile per collaborazioni' : 'Available for collaborations'}
                 </span>
               </div>
 
@@ -102,9 +104,9 @@ export default function Hero() {
                 ref={subtitleRef}
                 className="text-lg sm:text-xl text-[#33383f] mb-8 max-w-xl leading-relaxed"
               >
-                Creo agenti che trasformano il modo in cui interagisci con la
-                tecnologia. Specializzato in NLP, LLM e architetture
-                AI avanzate.
+                {language === 'it'
+                  ? 'Unisco formazione scientifica, matematica e machine learning per costruire modelli utili su problemi reali.'
+                  : 'I combine scientific training, mathematics and machine learning to build useful models for real-world problems.'}
               </p>
 
               <div className="flex flex-wrap gap-4">
@@ -113,7 +115,7 @@ export default function Hero() {
                   onClick={scrollToProjects}
                   className="btn-primary flex items-center gap-2 text-lg"
                 >
-                  Scopri i miei progetti
+                  {language === 'it' ? 'Scopri i miei progetti' : 'See my projects'}
                   <ArrowDown className="w-5 h-5" />
                 </button>
               </div>
@@ -129,7 +131,7 @@ export default function Hero() {
                 <div className="absolute -inset-4 bg-gradient-to-br from-[#0070a0] to-[#2c90c9] rounded-3xl -z-10 opacity-20" />
                 <img
                   src="/Cropped.jpg"
-                  alt="AI Agent Developer"
+                  alt="Simone Torrengo"
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -141,9 +143,11 @@ export default function Hero() {
                   </div>
                   <div>
                     <div className="font-semibold text-[#1f1f1f]">
-                      Data Analyst & AI Specialist
+                      {language === 'it' ? 'Data Analyst e AI Specialist' : 'Data Analyst and AI Specialist'}
                     </div>
-                    <div className="text-sm text-[#33383f]">Certificato</div>
+                    <div className="text-sm text-[#33383f]">
+                      {language === 'it' ? 'Certificato' : 'Certified'}
+                    </div>
                   </div>
                 </div>
               </div>
