@@ -105,8 +105,8 @@ export default function Hero() {
                 className="text-lg sm:text-xl text-[#33383f] mb-8 max-w-xl leading-relaxed"
               >
                 {language === 'it'
-                  ? 'Unisco formazione scientifica, matematica e machine learning per costruire modelli utili su problemi reali.'
-                  : 'I combine scientific training, mathematics and machine learning to build useful models for real-world problems.'}
+                  ? 'Unisco formazione scientifica, matematica e certificazioni Azure AI per costruire soluzioni intelligenti su problemi reali.'
+                  : 'I combine scientific training, mathematics and Azure AI certifications to build intelligent solutions for real-world problems.'}
               </p>
 
               <div className="flex flex-wrap gap-4">

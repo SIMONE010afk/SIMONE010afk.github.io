@@ -35,16 +35,16 @@ const projects = [
   },
   {
     id: 3,
-    titleIt: 'Data Engineering Risultati Nuoto',
-    titleEn: 'Swimming Results Data Engineering',
+    titleIt: 'Certificazioni Microsoft Azure AI',
+    titleEn: 'Microsoft Azure AI Certifications',
     descriptionIt:
-      'Parsing e unificazione di dataset eterogenei (Olimpiadi, Mondiali, Pro Series) in schema coerente per training e analisi.',
+      'Percorso certificato Microsoft su AI Agents e Computer Vision in Azure, con focus su RAG, prompt engineering, OCR, valutazione agenti e deployment cloud di soluzioni AI production-ready.',
     descriptionEn:
-      'Parsing and unification of heterogeneous datasets (Olympics, Worlds, Pro Series) into a consistent schema for training and analysis.',
-    image: '/project-2.jpg',
-    tags: ['ETL', 'CSV Parsing', 'Data Quality', 'Python'],
+      'Microsoft-certified path on AI Agents and Computer Vision in Azure, focused on RAG, prompt engineering, OCR, agent evaluation, and cloud deployment of production-ready AI solutions.',
+    image: '/Foto_certificazioni.png',
+    tags: ['Azure AI Foundry', 'AI Agents', 'Computer Vision', 'RAG'],
     icon: Database,
-    github: '#',
+    github: 'https://github.com/SIMONE010afk/Certificazioni',
   },
 ];
 
